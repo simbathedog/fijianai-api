@@ -1,0 +1,29 @@
+# ===== Node / TypeScript =====
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# Builds / bundles
+dist/
+build/
+coverage/
+
+# Env & local config
+.env
+.env.*.local
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Static publish output (keep off main)
+.gh-pages/
+
+# Frontend subproject
+site/node_modules/
+site/dist/
