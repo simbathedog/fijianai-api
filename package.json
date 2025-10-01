@@ -26,13 +26,13 @@
     "health:remote": "node scripts/healthcheck.mjs https://<your-api>.ondigitalocean.app",
     "build": "tsc",
     "build:site": "npm --prefix site run build && powershell -NoProfile -Command \"Remove-Item -Recurse -Force dist/site-english-latest/public 2>$null; New-Item -ItemType Directory -Force -Path dist/site-english-latest/public | Out-Null; Copy-Item -Recurse -Force site/dist/* dist/site-english-latest/public/\"",
-    "publish:site": "pwsh -NoProfile -File .\\Publish-FijiEd.ps1 -PreferGhPages -OpenUrl",
-    "publish:site:stamp": "pwsh -NoProfile -File .\\\\Publish-FijiEd.ps1 -PreferGhPages -OpenUrl -Stamp",
-    "deploy:site": "npm run build:site && npm run publish:site:stamp",
+    "publish:site": null,
+    "publish:site:stamp": null,
+    "deploy:site": null,
     "build:site:repo": "npm --prefix site run build -- --base=/fijianai-api/",
     "build:site:domain": "npm --prefix site run build -- --base=/",
-    "deploy:site:repo": "npm run build:site:repo && npm run publish:site:stamp",
-    "deploy:site:domain": "npm run build:site:domain && npm run publish:site:stamp",
+    "deploy:site:repo": null,
+    "deploy:site:domain": null,
     "postbuild": "pwsh -NoProfile -File .\\scripts\\Generate-Sitemap.ps1 -OutDir \"dist\\site-english-latest\\public\" -SiteUrl \"https://fijianai.com\""
   }
 }
